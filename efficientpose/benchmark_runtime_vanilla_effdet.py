@@ -19,8 +19,8 @@ from tqdm import tqdm
 import tensorflow as tf
 
 from model_vanilla_effdet import efficientdet
-from generators.linemod import LineModGenerator
-from generators.occlusion import OcclusionGenerator
+from efficientpose.generators import LineModGenerator
+from efficientpose.generators import OcclusionGenerator
 
 
 def main():

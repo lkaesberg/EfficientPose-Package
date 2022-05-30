@@ -46,9 +46,9 @@ from tensorflow.keras import models
 from tensorflow.keras import backend
 from tfkeras import EfficientNetB0, EfficientNetB1, EfficientNetB2, EfficientNetB3, EfficientNetB4, EfficientNetB5, EfficientNetB6
 
-from layers import ClipBoxes, RegressBoxes, FilterDetections, wBiFPNAdd, BatchNormalization, RegressTranslation, CalculateTxTy, GroupNormalization
-from initializers import PriorProbability
-from utils.anchors import anchors_for_shape
+from efficientpose.layers import ClipBoxes, RegressBoxes, FilterDetections, wBiFPNAdd, BatchNormalization, RegressTranslation, CalculateTxTy, GroupNormalization
+from efficientpose.initializers import PriorProbability
+from efficientpose.utils import anchors_for_shape
 import numpy as np
 
 

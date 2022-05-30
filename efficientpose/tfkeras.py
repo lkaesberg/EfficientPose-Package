@@ -2,8 +2,8 @@
 Source Code from Keras EfficientDet implementation (https://github.com/xuannianz/EfficientDet) licensed under the Apache License, Version 2.0
 """
 
-from utils import inject_tfkeras_modules, init_tfkeras_custom_objects
-import efficientnet as model
+from efficientpose.utils import inject_tfkeras_modules, init_tfkeras_custom_objects
+from efficientpose import efficientnet as model
 
 EfficientNetB0 = inject_tfkeras_modules(model.EfficientNetB0)
 EfficientNetB1 = inject_tfkeras_modules(model.EfficientNetB1)

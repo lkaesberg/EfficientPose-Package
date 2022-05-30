@@ -46,11 +46,11 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.optimizers import Adam
 
-from model import build_EfficientPose
-from losses import smooth_l1, focal, transformation_loss
-from efficientnet import BASE_WEIGHTS_PATH, WEIGHTS_HASHES
+from efficientpose.model import build_EfficientPose
+from efficientpose.losses import smooth_l1, focal, transformation_loss
+from efficientpose.efficientnet import BASE_WEIGHTS_PATH, WEIGHTS_HASHES
 
-from custom_load_weights import custom_load_weights
+from efficientpose.custom_load_weights import custom_load_weights
 
 
 def parse_args(args):
@@ -272,7 +272,7 @@ def create_callbacks(training_model, prediction_model, validation_generator, arg
         callbacks.append(tensorboard_callback)
 
     if args.evaluation and validation_generator:
-        from eval.eval_callback import Evaluate
+        from efficientpose.efficientpose.eval import Evaluate
         evaluation = Evaluate(validation_generator, prediction_model, tensorboard = tensorboard_callback, save_path = save_path)
         callbacks.append(evaluation)
 
@@ -317,7 +317,7 @@ def create_generators(args):
     }
 
     if args.dataset_type == 'linemod':
-        from generators.linemod import LineModGenerator
+        from efficientpose.efficientpose.generators import LineModGenerator
         train_generator = LineModGenerator(
             args.linemod_path,
             args.object_id,
@@ -339,7 +339,7 @@ def create_generators(args):
             **common_args
         )
     elif args.dataset_type == 'occlusion':
-        from generators.occlusion import OcclusionGenerator
+        from efficientpose.efficientpose.generators import OcclusionGenerator
         train_generator = OcclusionGenerator(
             args.occlusion_path,
             rotation_representation = args.rotation_representation,

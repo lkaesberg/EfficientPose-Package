@@ -36,10 +36,10 @@ import argparse
 import sys
 import cv2
 
-from generators.linemod import LineModGenerator
-from generators.occlusion import OcclusionGenerator
-from utils.visualization import draw_annotations, draw_boxes
-from utils.anchors import anchors_for_shape, compute_gt_annotations
+from efficientpose.generators import LineModGenerator
+from efficientpose.generators import OcclusionGenerator
+from efficientpose.utils import draw_annotations, draw_boxes
+from efficientpose.utils import anchors_for_shape, compute_gt_annotations
 
 
 def parse_args(args):

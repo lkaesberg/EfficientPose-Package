@@ -20,8 +20,8 @@ import math
 import tensorflow as tf
 
 from model import build_EfficientPose
-from generators.linemod import LineModGenerator
-from generators.occlusion import OcclusionGenerator
+from efficientpose.generators import LineModGenerator
+from efficientpose.generators import OcclusionGenerator
 
 
 def main():

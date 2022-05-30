@@ -44,7 +44,7 @@ import sys
 import tensorflow as tf
 
 from model import build_EfficientPose
-from eval.common import evaluate
+from efficientpose.eval import evaluate
 
 
 def parse_args(args):
@@ -150,7 +150,7 @@ def create_generators(args):
     }
 
     if args.dataset_type == 'linemod':
-        from generators.linemod import LineModGenerator
+        from efficientpose.efficientpose.generators import LineModGenerator
         
         generator = LineModGenerator(
             args.linemod_path,
@@ -164,7 +164,7 @@ def create_generators(args):
             **common_args
         )
     elif args.dataset_type == 'occlusion':
-        from generators.occlusion import OcclusionGenerator
+        from efficientpose.efficientpose.generators import OcclusionGenerator
         
         generator = OcclusionGenerator(
             args.occlusion_path,

@@ -31,9 +31,9 @@ import math
 
 import tensorflow as tf
 
-from .model import build_EfficientPose
-from utils import preprocess_image
-from utils.visualization import draw_detections
+from efficientpose.model import build_EfficientPose
+from efficientpose.utils import preprocess_image
+from efficientpose.utils import draw_detections
 
 
 def main():

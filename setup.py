@@ -14,6 +14,6 @@ setup(
     version='1.0.0',
     description='EfficientPose',
     packages=find_packages(),
-    ext_modules=cythonize("utils/compute_overlap.pyx"),
+    ext_modules=cythonize("efficientpose/utils/compute_overlap.pyx"),
     include_dirs=[numpy.get_include()]
 )
