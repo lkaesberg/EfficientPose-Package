@@ -31,7 +31,7 @@ import math
 
 import tensorflow as tf
 
-from model import build_EfficientPose
+from .model import build_EfficientPose
 from utils import preprocess_image
 from utils.visualization import draw_detections
 
