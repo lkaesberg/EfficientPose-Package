@@ -38,7 +38,7 @@ from keras_applications.imagenet_utils import _obtain_input_shape
 from keras_applications.imagenet_utils import preprocess_input as _preprocess_input
 
 from efficientpose.utils import get_submodules_from_kwargs
-from layers import BatchNormalization
+from efficientpose.layers import BatchNormalization
 
 backend = None
 layers = None

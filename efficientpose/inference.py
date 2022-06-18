@@ -33,7 +33,7 @@ import tensorflow as tf
 
 from efficientpose.model import build_EfficientPose
 from efficientpose.utils import preprocess_image
-from efficientpose.utils import draw_detections
+from efficientpose.utils.visualization import draw_detections
 
 
 def main():

@@ -26,7 +26,7 @@ Keras RetinaNet implementation (https://github.com/fizyr/keras-retinanet) licens
 import numpy as np
 from tensorflow import keras
 
-from utils.compute_overlap import compute_overlap
+from efficientpose.utils.compute_overlap import compute_overlap
 
 
 class AnchorParameters:

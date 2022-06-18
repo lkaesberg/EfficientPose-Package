@@ -40,7 +40,7 @@ limitations under the License.
 import cv2
 import numpy as np
 
-from utils.colors import label_color
+from efficientpose.utils.colors import label_color
 
 
 def draw_box(image, box, color, thickness = 2):
